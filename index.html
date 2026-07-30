@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Η Συλλογή Αυτοκινήτων μου</title>
+    <meta
+      name="description"
+      content="Όλα τα αυτοκίνητα που είχα και έχω στην κατοχή μου."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1>🚗 Η Συλλογή Αυτοκινήτων μου</h1>
+        <p class="subtitle">
+          Όλα τα αυτοκίνητα που πέρασαν από τα χέρια μου με την πάροδο των χρόνων.
+        </p>
+        <div class="stats" id="stats"></div>
+        <nav class="filters" id="filters"></nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="grid" id="grid"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span id="footerCount"></span>
+      </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" id="lightboxClose" aria-label="Κλείσιμο">
+        &times;
+      </button>
+      <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
