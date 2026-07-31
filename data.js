@@ -222,7 +222,7 @@ const CARS = [
     brand: "BMW",
     model: "X1 sDrive20i",
     engine: "1.5",
-    power: "150 HP",
+    power: "170 HP",
     year: "2025",
     owned: "",
     category: "Replacement",
