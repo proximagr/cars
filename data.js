@@ -1,8 +1,3 @@
-// Λίστα με όλα τα αυτοκίνητα.
-// Πεδία: brand, model, engine (κυβικά/κινητήρας), power, year (χρονολογία αυτοκινήτου),
-// owned (χρονική περίοδος κατοχής), category, note, photo.
-// Άφησε ένα πεδίο "" (κενό) αν δεν το γνωρίζεις.
-
 const CARS = [
   // ---------- OWNED ----------
   {
@@ -13,7 +8,6 @@ const CARS = [
     year: 1989,
     owned: "2002 – 2010",
     category: "Owned",
-    note: "Το αυτοκίνητο που μου πήραν οι γίνεις μου",
     photo: "photos/starlet.png",
   },
   {
@@ -24,7 +18,6 @@ const CARS = [
     year: 2010,
     owned: "2010 – 2019",
     category: "Owned",
-    note: "Το πρώτο αυτοκίνητο που πήραμε με τη Σίσση",
     photo: "photos/fabia.png",
   },
   {
@@ -35,7 +28,6 @@ const CARS = [
     year: 2019,
     owned: "2019 – 2022",
     category: "Owned",
-    note: "Το δεύτερο μας αυτοκίητο",
     photo: "photos/vitara.png",
   },
   {
@@ -46,7 +38,6 @@ const CARS = [
     year: 2021,
     owned: "2021 - σήμερα",
     category: "Owned",
-    note: "",
     photo: "photos/aygo.png",
   },
   {
@@ -57,7 +48,6 @@ const CARS = [
     year: 2006,
     owned: "2019 - 2021",
     category: "Owned",
-    note: "",
     photo: "photos/getz.png",
   },
 
@@ -70,11 +60,10 @@ const CARS = [
     year: 2024,
     owned: "2006 – 2010",
     category: "Sissy",
-    note: "",
     photo: "photos/ignis.png",
   },
 
-  // ---------- COMPANY CAR ----------
+  // ---------- Replacement ----------
   {
     brand: "DS",
     model: "7 Crossback",
@@ -82,8 +71,7 @@ const CARS = [
     power: "225 HP",
     year: 2018,
     owned: "2022 – 2026",
-    category: "Company Car",
-    note: "Microsoft",
+    category: "Replacement",
     photo: "photos/ds.png",
   },
   {
@@ -93,8 +81,7 @@ const CARS = [
     power: "600 HP",
     year: 2026,
     owned: "2026 – σήμερα",
-    category: "Company Car",
-    note: "Microsoft",
+    category: "Replacement",
     photo: "photos/smart.png",
   },
 
@@ -107,7 +94,6 @@ const CARS = [
     year: 1986,
     owned: "",
     category: "Father",
-    note: "Του πατέρα μου",
     photo: "photos/target.png",
   },
   {
@@ -118,7 +104,6 @@ const CARS = [
     year: 1998,
     owned: "",
     category: "Father",
-    note: "Του πατέρα μου",
     photo: "photos/almera.png",
   },
 
@@ -131,7 +116,6 @@ const CARS = [
     year: "",
     owned: "",
     category: "3rd Party",
-    note: "Στρατιωτικό",
     photo: "photos/gd290.png",
   },
   {
@@ -142,7 +126,6 @@ const CARS = [
     year: 1982,
     owned: "",
     category: "3rd Party",
-    note: "Του πεθερού μου",
     photo: "photos/pajero.png",
   },
   {
@@ -153,7 +136,6 @@ const CARS = [
     year: 2023,
     owned: "",
     category: "3rd Party",
-    note: "Ενοικιαζόμενο, Ιταλία",
     photo: "photos/c3.png",
   },
   {
@@ -164,7 +146,6 @@ const CARS = [
     year: 2022,
     owned: "",
     category: "3rd Party",
-    note: "Ενοικιαζόμενο, Κύπρος",
     photo: "photos/yaris.png",
   },
   {
@@ -175,7 +156,6 @@ const CARS = [
     year: 2000,
     owned: "",
     category: "3rd Party",
-    note: "Του ξαδέρφου μου, Κύπρος",
     photo: "photos/civic.png",
   },
   {
@@ -186,7 +166,6 @@ const CARS = [
     year: 2010,
     owned: "",
     category: "3rd Party",
-    note: "Του πεθερού μου",
     photo: "photos/rav4.png",
   },
   {
@@ -197,7 +176,6 @@ const CARS = [
     year: 2003,
     owned: "",
     category: "3rd Party",
-    note: "Του Διονύση",
     photo: "photos/jimny.png",
   },
   {
@@ -207,8 +185,7 @@ const CARS = [
     power: "",
     year: "2019",
     owned: "",
-    category: "Company Car",
-    note: "Αντικατάσταση DS 7",
+    category: "Replacement",
     photo: "photos/3008.png",
   },
   {
@@ -218,8 +195,7 @@ const CARS = [
     power: "150 HP",
     year: "2020",
     owned: "",
-    category: "Company Car",
-    note: "Pre delivery car, DS 7",
+    category: "Replacement",
     photo: "photos/puma.png",
   },
   {
@@ -229,8 +205,7 @@ const CARS = [
     power: "120 HP",
     year: "2022",
     owned: "",
-    category: "Company Car",
-    note: "Αντικατάσταση DS 7",
+    category: "Replacement",
     photo: "photos/q3.png",
   },
   {
@@ -240,8 +215,7 @@ const CARS = [
     power: "",
     year: "2024",
     owned: "",
-    category: "Company Car",
-    note: "Αντικατάσταση DS 7",
+    category: "Replacement",
     photo: "photos/tiguan.png",
   },
   {
@@ -251,8 +225,7 @@ const CARS = [
     power: "150 HP",
     year: "2025",
     owned: "",
-    category: "Company Car",
-    note: "Αντικατάσταση DS 7",
+    category: "Replacement",
     photo: "photos/x1.png",
   },
 ];

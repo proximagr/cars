@@ -28,7 +28,6 @@ Cars/
   year: 1989,               // Χρονολογία αυτοκινήτου
   owned: "2002 – 2010",     // Περίοδος κατοχής (άφησε "" αν δεν ισχύει)
   category: "Owned",        // Owned | Sissy | Company Car | Father | 3rd Party
-  note: "",                 // Προαιρετική σημείωση
   photo: "photos/starlet.png",
 },
 ```

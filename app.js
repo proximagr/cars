@@ -5,17 +5,14 @@ const CATEGORY_LABELS = {
   "Company Car": "Εταιρικά",
   Father: "Του πατέρα μου",
   "3rd Party": "Τρίτων",
+  Replacement: "Αντικατάσταση",
 };
 
 const grid = document.getElementById("grid");
-const filtersEl = document.getElementById("filters");
-const statsEl = document.getElementById("stats");
 const footerCount = document.getElementById("footerCount");
 const lightbox = document.getElementById("lightbox");
 const lightboxInner = document.getElementById("lightboxInner");
 const lightboxClose = document.getElementById("lightboxClose");
-
-let activeFilter = "all";
 
 function label(cat) {
   return CATEGORY_LABELS[cat] || cat;
@@ -35,43 +32,9 @@ function escapeHtml(str) {
   );
 }
 
-// --- Στατιστικά ---
-function renderStats() {
-  const total = CARS.length;
-  const categories = new Set(CARS.map((c) => c.category)).size;
-  statsEl.innerHTML = `
-    <div class="stat"><b>${total}</b><span>Αυτοκίνητα</span></div>
-    <div class="stat"><b>${categories}</b><span>Κατηγορίες</span></div>
-  `;
-}
-
-// --- Φίλτρα ---
-function renderFilters() {
-  const cats = ["all", ...new Set(CARS.map((c) => c.category))];
-  filtersEl.innerHTML = cats
-    .map((cat) => {
-      const text = cat === "all" ? "Όλα" : label(cat);
-      return `<button class="filter-btn ${
-        cat === activeFilter ? "active" : ""
-      }" data-cat="${escapeHtml(cat)}">${escapeHtml(text)}</button>`;
-    })
-    .join("");
-
-  filtersEl.querySelectorAll(".filter-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      activeFilter = btn.dataset.cat;
-      renderFilters();
-      renderGrid();
-    });
-  });
-}
-
 // --- Κάρτες ---
 function renderGrid() {
-  const list =
-    activeFilter === "all"
-      ? CARS
-      : CARS.filter((c) => c.category === activeFilter);
+  const list = CARS;
 
   grid.innerHTML = list
     .map((car, i) => {
@@ -97,11 +60,6 @@ function renderGrid() {
                 ? `<div class="card-specs">${specs
                     .map((s) => `<span class="chip">${escapeHtml(s)}</span>`)
                     .join("")}</div>`
-                : ""
-            }
-            ${
-              car.note
-                ? `<div class="card-note">${escapeHtml(car.note)}</div>`
                 : ""
             }
             ${
@@ -135,7 +93,6 @@ function openLightbox(car) {
     ["Χρονολογία", car.year],
     ["Περίοδος κατοχής", car.owned],
     ["Κατηγορία", label(car.category)],
-    ["Σημείωση", car.note],
   ].filter(([, v]) => v !== "" && v !== undefined && v !== null);
 
   lightboxInner.innerHTML = `
@@ -174,6 +131,4 @@ document.addEventListener("keydown", (e) => {
 });
 
 // --- Init ---
-renderStats();
-renderFilters();
 renderGrid();

@@ -61,64 +61,6 @@ body {
   font-size: 1.05rem;
 }
 
-.stats {
-  display: flex;
-  gap: 24px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.stat {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 16px;
-}
-
-.stat b {
-  font-size: 1.4rem;
-  display: block;
-  font-weight: 700;
-}
-
-.stat span {
-  color: var(--text-dim);
-  font-size: 0.85rem;
-}
-
-/* Filters */
-.filters {
-  display: flex;
-  gap: 10px;
-  margin-top: 24px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--text-dim);
-  padding: 9px 18px;
-  border-radius: 999px;
-  font-size: 0.92rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.18s ease;
-  font-family: inherit;
-}
-
-.filter-btn:hover {
-  color: var(--text);
-  border-color: var(--accent);
-}
-
-.filter-btn.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
-  font-weight: 600;
-}
-
 /* Grid */
 .grid {
   display: grid;
@@ -224,12 +166,6 @@ body {
   background: var(--accent-soft);
   padding: 3px 9px;
   border-radius: 6px;
-}
-
-.card-note {
-  color: var(--text-dim);
-  font-size: 0.85rem;
-  font-style: italic;
 }
 
 /* Footer */
