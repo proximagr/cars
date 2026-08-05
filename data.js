@@ -58,12 +58,12 @@ const CARS = [
     engine: "1.4",
     power: "85 HP",
     year: 2024,
-    owned: "2006 – 2010",
+    owned: "2005 – 2010",
     category: "Sissy",
     photo: "photos/ignis.png",
   },
 
-  // ---------- Replacement ----------
+  // ---------- Company Cars ----------
   {
     brand: "DS",
     model: "7 Crossback",
@@ -71,7 +71,7 @@ const CARS = [
     power: "225 HP",
     year: 2018,
     owned: "2022 – 2026",
-    category: "Replacement",
+    category: "Company Car",
     photo: "photos/ds.png",
   },
   {
@@ -81,7 +81,7 @@ const CARS = [
     power: "600 HP",
     year: 2026,
     owned: "2026 – σήμερα",
-    category: "Replacement",
+    category: "Company Car",
     photo: "photos/smart.png",
   },
 
@@ -92,7 +92,7 @@ const CARS = [
     engine: "1.2",
     power: "52 HP",
     year: 1986,
-    owned: "",
+    owned: "2000",
     category: "Father",
     photo: "photos/target.png",
   },
@@ -102,7 +102,7 @@ const CARS = [
     engine: "1.6",
     power: "100 HP",
     year: 1998,
-    owned: "",
+    owned: "2001",
     category: "Father",
     photo: "photos/almera.png",
   },
@@ -114,7 +114,7 @@ const CARS = [
     engine: "2.9",
     power: "",
     year: "",
-    owned: "",
+    owned: "2006",
     category: "3rd Party",
     photo: "photos/gd290.png",
   },
