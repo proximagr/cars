@@ -135,7 +135,7 @@ const CARS = [
     power: "",
     year: 2023,
     owned: "",
-    category: "3rd Party",
+    category: "Rental",
     photo: "photos/c3.png",
   },
   {
@@ -145,7 +145,7 @@ const CARS = [
     power: "",
     year: 2022,
     owned: "",
-    category: "3rd Party",
+    category: "Rental",
     photo: "photos/yaris.png",
   },
   {

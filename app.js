@@ -6,6 +6,7 @@ const CATEGORY_LABELS = {
   Father: "Του πατέρα μου",
   "3rd Party": "Τρίτων",
   Replacement: "Αντικατάσταση",
+  Rental: "Ενοικιαζόμενα"
 };
 
 const grid = document.getElementById("grid");
